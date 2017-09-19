@@ -1,0 +1,183 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema id="mydbDataSet1" targetNamespace="http://tempuri.org/mydbDataSet1.xsd" xmlns:mstns="http://tempuri.org/mydbDataSet1.xsd" xmlns="http://tempuri.org/mydbDataSet1.xsd" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:msprop="urn:schemas-microsoft-com:xml-msprop" attributeFormDefault="qualified" elementFormDefault="qualified">
+  <xs:annotation>
+    <xs:appinfo source="urn:schemas-microsoft-com:xml-msdatasource">
+      <DataSource DefaultConnectionIndex="0" FunctionsComponentName="QueriesTableAdapter" Modifier="AutoLayout, AnsiClass, Class, Public" SchemaSerializationMode="IncludeSchema" xmlns="urn:schemas-microsoft-com:xml-msdatasource">
+        <Connections>
+          <Connection AppSettingsObjectName="Settings" AppSettingsPropertyName="mydbConnectionString1" ConnectionStringObject="" IsAppSettingsProperty="true" Modifier="Assembly" Name="mydbConnectionString1 (Settings)" ParameterPrefix="@" PropertyReference="ApplicationSettings.ImportExportManagement.Properties.Settings.GlobalReference.Default.mydbConnectionString1" Provider="MySql.Data.MySqlClient" />
+        </Connections>
+        <Tables>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="consigneedetailsTableAdapter" GeneratorDataComponentClassName="consigneedetailsTableAdapter" Name="consigneedetails" UserDataComponentName="consigneedetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.consigneedetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ConsigneeID`, `FName`, `LName`, `Address`, `City`, `Country`, `Postal_ID` FROM `consigneedetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="customdetailsTableAdapter" GeneratorDataComponentClassName="customdetailsTableAdapter" Name="customdetails" UserDataComponentName="customdetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.customdetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `CustomID`, `CusdecNo`, `BoatNoteNo`, `CostEntryPassing`, `CostBoatNote`, `TotalCost` FROM `customdetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="jobinfoTableAdapter" GeneratorDataComponentClassName="jobinfoTableAdapter" Name="jobinfo" UserDataComponentName="jobinfoTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.jobinfo" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `JobID`, `Import_Export`, `FCL_LCL_Air`, `Type`, `OpenDate`, `CompletedDate`, `Weight`, `Vessel`, `ContainerNo`, `Comments`, `shipperdetails_ShipperID`, `consigneedetails_ConsigneeID`, `transportationdetails_TransportID`, `customdetails_CustomID`, `jobwarehousedetails_JobwarehouseID`, `overseas_OverseasID` FROM `jobinfo`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="jobwarehousedetailsTableAdapter" GeneratorDataComponentClassName="jobwarehousedetailsTableAdapter" Name="jobwarehousedetails" UserDataComponentName="jobwarehousedetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.jobwarehousedetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `JobwarehouseID`, `GRN`, `ChargesSizeType`, `ChargesSize`, `MaintainanceCost`, `TotalCost`, `warehousedetails_WarehouseID` FROM `jobwarehousedetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="overseasTableAdapter" GeneratorDataComponentClassName="overseasTableAdapter" Name="overseas" UserDataComponentName="overseasTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.overseas" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `OverseasID`, `Cost`, `Overseas_agent`, `Date`, `overseasagent_OverseasAgentID` FROM `overseas`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="overseasagentTableAdapter" GeneratorDataComponentClassName="overseasagentTableAdapter" Name="overseasagent" UserDataComponentName="overseasagentTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.overseasagent" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `OverseasAgentID`, `FName`, `LName`, `City`, `Country` FROM `overseasagent`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="shipperdetailsTableAdapter" GeneratorDataComponentClassName="shipperdetailsTableAdapter" Name="shipperdetails" UserDataComponentName="shipperdetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.shipperdetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `ShipperID`, `LName`, `FName`, `Address`, `City`, `Country`, `Postal_ID` FROM `shipperdetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="transportationdetailsTableAdapter" GeneratorDataComponentClassName="transportationdetailsTableAdapter" Name="transportationdetails" UserDataComponentName="transportationdetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.transportationdetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `TransportID`, `Cost`, `ContainerType`, `HighSecurity`, `DestinationType`, `GRN`, `IntAddress` FROM `transportationdetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+          <TableAdapter BaseClass="System.ComponentModel.Component" DataAccessorModifier="AutoLayout, AnsiClass, Class, Public" DataAccessorName="warehousedetailsTableAdapter" GeneratorDataComponentClassName="warehousedetailsTableAdapter" Name="warehousedetails" UserDataComponentName="warehousedetailsTableAdapter">
+            <MainSource>
+              <DbSource ConnectionRef="mydbConnectionString1 (Settings)" DbObjectName="mydb.warehousedetails" DbObjectType="Table" FillMethodModifier="Public" FillMethodName="Fill" GenerateMethods="Both" GenerateShortCommands="true" GeneratorGetMethodName="GetData" GeneratorSourceName="Fill" GetMethodModifier="Public" GetMethodName="GetData" QueryType="Rowset" ScalarCallRetval="System.Object, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" UseOptimisticConcurrency="true" UserGetMethodName="GetData" UserSourceName="Fill">
+                <SelectCommand>
+                  <DbCommand CommandType="Text" ModifiedByUser="false">
+                    <CommandText>SELECT `WarehouseID`, `Address`, `City`, `Country`, `Postal_ID` FROM `warehousedetails`</CommandText>
+                    <Parameters />
+                  </DbCommand>
+                </SelectCommand>
+              </DbSource>
+            </MainSource>
+            <Mappings />
+            <Sources />
+          </TableAdapter>
+        </Tables>
+        <Sources />
+      </DataSource>
+    </xs:appinfo>
+  </xs:annotation>
+  <xs:element name="mydbDataSet1" msdata:IsDataSet="true" msdata:UseCurrentLocale="true" msprop:EnableTableAdapterManager="True" msprop:Generator_DataSetName="mydbDataSet1" msprop:Generator_UserDSName="mydbDataSet1">
+    <xs:complexType>
+      <xs:choice minOccurs="0" maxOccurs="unbounded">
+        <xs:element name="consigneedetails" msprop:Generator_TableClassName="consigneedetailsDataTable" msprop:Generator_TableVarName="tableconsigneedetails" msprop:Generator_TablePropName="consigneedetails" msprop:Generator_RowDeletingName="consigneedetailsRowDeleting" msprop:Generator_RowChangingName="consigneedetailsRowChanging" msprop:Generator_RowEvHandlerName="consigneedetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="consigneedetailsRowDeleted" msprop:Generator_UserTableName="consigneedetails" msprop:Generator_RowChangedName="consigneedetailsRowChanged" msprop:Generator_RowEvArgName="consigneedetailsRowChangeEvent" msprop:Generator_RowClassName="consigneedetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="customdetails" msprop:Generator_TableClassName="customdetailsDataTable" msprop:Generator_TableVarName="tablecustomdetails" msprop:Generator_TablePropName="customdetails" msprop:Generator_RowDeletingName="customdetailsRowDeleting" msprop:Generator_RowChangingName="customdetailsRowChanging" msprop:Generator_RowEvHandlerName="customdetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="customdetailsRowDeleted" msprop:Generator_UserTableName="customdetails" msprop:Generator_RowChangedName="customdetailsRowChanged" msprop:Generator_RowEvArgName="customdetailsRowChangeEvent" msprop:Generator_RowClassName="customdetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jobinfo" msprop:Generator_TableClassName="jobinfoDataTable" msprop:Generator_TableVarName="tablejobinfo" msprop:Generator_TablePropName="jobinfo" msprop:Generator_RowDeletingName="jobinfoRowDeleting" msprop:Generator_RowChangingName="jobinfoRowChanging" msprop:Generator_RowEvHandlerName="jobinfoRowChangeEventHandler" msprop:Generator_RowDeletedName="jobinfoRowDeleted" msprop:Generator_UserTableName="jobinfo" msprop:Generator_RowChangedName="jobinfoRowChanged" msprop:Generator_RowEvArgName="jobinfoRowChangeEvent" msprop:Generator_RowClassName="jobinfoRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="jobwarehousedetails" msprop:Generator_TableClassName="jobwarehousedetailsDataTable" msprop:Generator_TableVarName="tablejobwarehousedetails" msprop:Generator_TablePropName="jobwarehousedetails" msprop:Generator_RowDeletingName="jobwarehousedetailsRowDeleting" msprop:Generator_RowChangingName="jobwarehousedetailsRowChanging" msprop:Generator_RowEvHandlerName="jobwarehousedetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="jobwarehousedetailsRowDeleted" msprop:Generator_UserTableName="jobwarehousedetails" msprop:Generator_RowChangedName="jobwarehousedetailsRowChanged" msprop:Generator_RowEvArgName="jobwarehousedetailsRowChangeEvent" msprop:Generator_RowClassName="jobwarehousedetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="overseas" msprop:Generator_TableClassName="overseasDataTable" msprop:Generator_TableVarName="tableoverseas" msprop:Generator_TablePropName="overseas" msprop:Generator_RowDeletingName="overseasRowDeleting" msprop:Generator_RowChangingName="overseasRowChanging" msprop:Generator_RowEvHandlerName="overseasRowChangeEventHandler" msprop:Generator_RowDeletedName="overseasRowDeleted" msprop:Generator_UserTableName="overseas" msprop:Generator_RowChangedName="overseasRowChanged" msprop:Generator_RowEvArgName="overseasRowChangeEvent" msprop:Generator_RowClassName="overseasRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="overseasagent" msprop:Generator_TableClassName="overseasagentDataTable" msprop:Generator_TableVarName="tableoverseasagent" msprop:Generator_TablePropName="overseasagent" msprop:Generator_RowDeletingName="overseasagentRowDeleting" msprop:Generator_RowChangingName="overseasagentRowChanging" msprop:Generator_RowEvHandlerName="overseasagentRowChangeEventHandler" msprop:Generator_RowDeletedName="overseasagentRowDeleted" msprop:Generator_UserTableName="overseasagent" msprop:Generator_RowChangedName="overseasagentRowChanged" msprop:Generator_RowEvArgName="overseasagentRowChangeEvent" msprop:Generator_RowClassName="overseasagentRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="shipperdetails" msprop:Generator_TableClassName="shipperdetailsDataTable" msprop:Generator_TableVarName="tableshipperdetails" msprop:Generator_TablePropName="shipperdetails" msprop:Generator_RowDeletingName="shipperdetailsRowDeleting" msprop:Generator_RowChangingName="shipperdetailsRowChanging" msprop:Generator_RowEvHandlerName="shipperdetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="shipperdetailsRowDeleted" msprop:Generator_UserTableName="shipperdetails" msprop:Generator_RowChangedName="shipperdetailsRowChanged" msprop:Generator_RowEvArgName="shipperdetailsRowChangeEvent" msprop:Generator_RowClassName="shipperdetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="transportationdetails" msprop:Generator_TableClassName="transportationdetailsDataTable" msprop:Generator_TableVarName="tabletransportationdetails" msprop:Generator_TablePropName="transportationdetails" msprop:Generator_RowDeletingName="transportationdetailsRowDeleting" msprop:Generator_RowChangingName="transportationdetailsRowChanging" msprop:Generator_RowEvHandlerName="transportationdetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="transportationdetailsRowDeleted" msprop:Generator_UserTableName="transportationdetails" msprop:Generator_RowChangedName="transportationdetailsRowChanged" msprop:Generator_RowEvArgName="transportationdetailsRowChangeEvent" msprop:Generator_RowClassName="transportationdetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+        <xs:element name="warehousedetails" msprop:Generator_TableClassName="warehousedetailsDataTable" msprop:Generator_TableVarName="tablewarehousedetails" msprop:Generator_TablePropName="warehousedetails" msprop:Generator_RowDeletingName="warehousedetailsRowDeleting" msprop:Generator_RowChangingName="warehousedetailsRowChanging" msprop:Generator_RowEvHandlerName="warehousedetailsRowChangeEventHandler" msprop:Generator_RowDeletedName="warehousedetailsRowDeleted" msprop:Generator_UserTableName="warehousedetails" msprop:Generator_RowChangedName="warehousedetailsRowChanged" msprop:Generator_RowEvArgName="warehousedetailsRowChangeEvent" msprop:Generator_RowClassName="warehousedetailsRow">
+          <xs:complexType>
+          </xs:complexType>
+        </xs:element>
+      </xs:choice>
+    </xs:complexType>
+  </xs:element>
+</xs:schema>
